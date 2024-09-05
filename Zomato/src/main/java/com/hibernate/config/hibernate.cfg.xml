@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database information here configuration throw the property tag -->
+		<!--<property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
+		 driver calss is not mandtory if we use the JDBC version 4-->
+		<property name="connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+		<property name="connection.username">system</property>
+		<property name="connection.password">Bishnu</property>
+		
+		<!-- Now mapp the Hibernate property-->
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<!-- Mapping file configuration-->
+		<mapping resource="com/hibernate/entity/Trnsaction.hbm.xml" />
+
+	</session-factory>
+</hibernate-configuration>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    <!-- Each entity for a mapping file-->
+   <hibernate-mapping>
+   <!-- This is the one approcha -->
+   	<!-- Entity class mapping with the database table-->
+   		<!--<class name="com.hibernate.entity.Order" table="ORDERS1" dynamic-insert="true">
+   		 This is the id property it is single id field
+   			<id name="orderId" column="ORDERID">
+   			 What ever id value provided in progarmming level it increment autometically
+   				<generator class="increment"></generator>
+   			</id>
+   			<property name="orderType" column="ORDERTYPE"></property>
+   			<property name="qty" column="QTY"></property>
+   			<property name="amount" column="AMOUNT"></property>
+   		</class>-->
+   		
+   		<!-- This is the second approch-->
+   		<!--<class name="com.hibernate.entity.Order" table="ORDERS1" dynamic-insert="true">
+   		 This is the id property it is single id field
+   			<id name="orderId">
+   				<column name="ORDERID"/>
+   			 What ever id value provided in progarmming level it increment autometically
+   				<generator class="increment"/>
+   			</id>
+   			<property name="orderType" >
+   				<column name="ORDERTYPE"/>
+   			</property>
+   			<property name="qty" >
+   				<column name="QTY"/>
+   			</property>
+   			<property name="amount">
+   				<column name="AMOUNT"/>
+   			</property>
+   		</class>-->
+   		<!-- This is the Thrid approch this is the best approch-->
+   		<class name="com.hibernate.entity.Order" table="ORDERS1" dynamic-insert="true">
+   		<!-- This is the id property it is single id field-->
+   			<id name="orderId">
+   			<!-- What ever id value provided in progarmming level it increment autometically-->
+   				<generator class="increment"/>
+   			</id>
+   			<property name="orderType" />
+   			<property name="amount"/>
+   			<property name="qty" />
+   		</class>
+   </hibernate-mapping>

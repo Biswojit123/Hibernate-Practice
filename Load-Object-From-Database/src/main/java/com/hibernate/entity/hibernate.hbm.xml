@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<!-- Map with table-->
+	<class name="com.hibernate.entity.Locker" table="LOCKER" dynamic-insert="true">
+	
+	<!-- locker id field-->
+		<id name="lockerId">
+			<column name="lockerId" />
+			<generator class="increment"></generator>
+		</id>
+		<!-- locker property-->
+		<property name="lockerName">
+			<column name="lockerName" />
+		</property>
+		<property name="lockerPass">
+			<column name="lockerPass" />
+		</property>
+		<property name="person">
+			<column name="person" />
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- Here Produ object mapping with Product table throw the XML Mapping-->
+
+<hibernate-mapping>
+<!-- Mapping the Object with Table-->
+	<class name="com.swiggy.entity.Product" table="product">
+		<!-- Here mapping the property with column-->
+		<id name="productId" column="PRODUCTID">
+			<!-- Incerment the id by useing generator tag-->
+			<generator class="increment"></generator>
+		</id>
+		<!-- Here all are the object property name and table column mapping happen-->
+		<property name="name" column="NAME"></property>
+		<property name="description" column="DESCRIPTION"></property>
+		<property name="price" column="PRICE"></property>
+		<property name="qty" column="QTY"></property>
+	</class><!-- End of class-->
+</hibernate-mapping><!-- That is the end of mapping-->

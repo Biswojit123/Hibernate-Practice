@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+	<!-- This is the Actual table that is Menu mapped with Menu Class-->
+	<class name="com.swiggy.entity.Menu" table="menu">
+		<!-- Id Property throw that all operation perfrom-->
+		<id name="serialNum" column="Serial_Num">
+			<generator class="identity"></generator>
+		</id>
+		<!-- This is the Map data means autometically another table is created to maintain the map data -->
+		<map name="menuData" table="map_data">
+		<!-- That is the Foregin key-->
+			<key column="map_id"></key>
+			<!-- That is the map key-->
+			<map-key column="map_key" type="string"></map-key>
+			<!-- That is the Map value-->
+			<element column="map_value" type="double"></element>
+		</map>
+		<!-- This is the another property for Menu class-->
+		<property name="menuType" column="Menu_type"></property>
+	</class>
+
+</hibernate-mapping>

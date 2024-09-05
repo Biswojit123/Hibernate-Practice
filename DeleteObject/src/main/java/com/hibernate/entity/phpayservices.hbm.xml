@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.hibernate.entity.PhPayServices" table="PhonePay" dynamic-update="true">
+		<id name="transactionId" column="transactionId">
+			<generator class="increment"/>
+		</id>
+		<property name="toSelf" column="toSelf"/>
+		<property name="toMobile" column="toMobile"/>
+		<property name="traName" column="traName"/>
+		<property name="recharge" column="recharge"/>
+	</class>
+</hibernate-mapping>

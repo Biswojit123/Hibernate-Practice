@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- root node that is Hibernate-mapping -->
+<hibernate-mapping>
+<!-- child-tah that is class that configure the Entity name to database table name-->
+	<class name="com.biswo.entity.Locker" table="LOCKER">
+	<!-- Id field so unique identification of record-->
+		<id name="lockerId"/>
+		<!-- properties of entity class configure with the database table column-->
+		<property name="lockerName" column="lockerName"/>
+		<property name="lockerPass" column="lockerPass"/>
+		<property name="person" column="person"/>
+	</class><!-- close of class tag-->
+</hibernate-mapping><!-- close of mapping tag-->

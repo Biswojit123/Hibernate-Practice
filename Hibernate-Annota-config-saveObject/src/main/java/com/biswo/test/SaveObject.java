@@ -20,7 +20,7 @@ public class SaveObject {
 			//Began the transaction 
 			tax = session.beginTransaction();
 			//Create the object of Movie
-			Movie movie = new Movie(12356,"RRR","Ram-Charan",2000000.0);
+			Movie movie = new Movie(12358,"RRR","Ram-Charan",2000000.0);
 			//Save object
 			Integer mId = (Integer) session.save(movie);
 			//print the movie id

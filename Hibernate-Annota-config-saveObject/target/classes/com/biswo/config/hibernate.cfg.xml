@@ -9,7 +9,6 @@
 		<!-- Hibernate Properties-->
 		<property name="hibernate.show_sql">true</property>
 		<property name="hibernate.format_sql">true</property>
-		<property name="hibernate.hbm2ddl.auto">update</property>
 		<!-- We have to config the mapping entity class-->
 		<mapping class="com.biswo.entity.Movie"/>
 	</session-factory>

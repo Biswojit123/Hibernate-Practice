@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.biswo.entity.Callertune" table="CALLERTUNE">
+		<id name="callerId" column="CALL_ID">
+			<generator class="increment"/>
+		</id>
+		<!-- add the versioning. It must be placed after id-->
+		<version name="updationCount" column="UPDATION_COUNT"/>
+		<property name="movieName" column="MOVIE_NAME"/>
+		<property name="tune" column="TUNE"/>
+	</class>
+</hibernate-mapping>
+

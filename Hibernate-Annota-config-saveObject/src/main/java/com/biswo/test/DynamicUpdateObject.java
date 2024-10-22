@@ -23,7 +23,7 @@ public class DynamicUpdateObject {
 				// Begin the transaction
 				transaction = session.beginTransaction();
 				// Create the Object
-				movie.setMovieBujet(896532.0);
+				movie.setMovieBujet(5635965.2);
 				// update the object
 				session.update(movie);
 				// commit the transaction

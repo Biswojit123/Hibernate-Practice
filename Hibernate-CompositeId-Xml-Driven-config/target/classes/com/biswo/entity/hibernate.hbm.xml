@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.biswo.entity.ProgrammerProjectInfo" table="ProgrmProjInfo">
+		<composite-id name="programmerId" class="com.biswo.entity.ProgrammerId">
+			<key-property name="programId"/>
+			<key-property name="projectId"/>
+		</composite-id>
+		<version name="updationCount"/>
+		<property name="programmerName"/>
+		<property name="projectName"/>
+		<property name="salary"/>
+		<property name="budget"/>
+	</class>
+</hibernate-mapping>
